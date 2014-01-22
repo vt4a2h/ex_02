@@ -63,9 +63,8 @@ namespace fixed_arrays {
     template <class Type, size_t arrayLength>
     FixedArray<Type, arrayLength>& FixedArray<Type, arrayLength>::operator=(FixedArray &&rhs)
     {
-        if (this != &rhs) {
+        if (this != &rhs)
             move(rhs, *this);
-        }
 
         return this;
     }
